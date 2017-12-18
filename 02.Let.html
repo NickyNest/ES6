@@ -1,0 +1,30 @@
+<script>
+    var message = "m";
+    {
+        var message = "new";
+    }
+    console.log(message);
+
+    var message1 = "m1";
+    {
+        let message1 = "new m1";
+    }
+    console.log(message1);
+    
+    var fs = [];
+    for (var i = 0; i < 10; i++) {
+        fs.push(function(){
+            console.log(i);
+        })
+    }
+    fs.forEach((f) => f());
+
+    fs = [];
+    for (let i = 0; i < 10; i++) {
+        fs.push(function(){
+            console.log(i);
+        })
+    }
+    fs.forEach((f) => f());
+    
+</script>

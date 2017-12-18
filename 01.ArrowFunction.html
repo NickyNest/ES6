@@ -1,0 +1,31 @@
+<script>
+    // Arrow functions
+    var createGreeting = function(message, name){
+        return message + " " + name;
+    }
+
+    var arrowGreeting = (message, name) => message + " " + name;
+
+    var deliveryBoy = {
+        name: "John",
+        
+        handleMessage: function (message, handler){
+            handler(message);
+        },
+        
+        receive: function () {
+            this.handleMessage("Hello, ", message => console.log(message + this.name))
+        }
+    }
+    deliveryBoy.receive();
+
+    var obj = {
+        i: 10,
+        b: () => console.log(this.i, this),
+        c: function() {
+            console.log(this.i, this);
+        }
+    }
+    obj.b(); // prints undefined, Window {...} (или глобальный объект)
+    obj.c(); // prints 10, Object {...}
+</script>
