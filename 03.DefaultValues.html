@@ -1,0 +1,12 @@
+<script>
+    function greet(greeting, name = "John") {
+        console.log(greeting + ", " + name);
+    }
+    greet("Hello");
+
+    function receive(complete = () => console.log("complete")) {
+        complete();
+    }
+
+    receive();
+</script>
