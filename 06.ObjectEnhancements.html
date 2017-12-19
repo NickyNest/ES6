@@ -1,0 +1,12 @@
+<script>
+    let go = () => { console.log("go"); }
+    let drive = "run";
+    var obj = {
+        go, 
+        move: () => { console.log("move"); },
+        [drive]: () => { console.log("drive"); }
+    };
+    obj.go();
+    obj.move();
+    obj.run();
+</script>

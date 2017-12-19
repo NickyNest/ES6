@@ -1,0 +1,19 @@
+<script>
+    const name = "John";
+    console.log(`Hello, ${name}`);
+
+    const x = 1;
+    const y = 2;
+    console.log(`${x} + ${y} = ${x + y}`);
+
+    console.log(`It's ${new Date().getHours()} hours`);
+
+    let tag = (strings, ...values) => {
+        if(values[0] > 20){
+            values[1] = "sleepy";
+        }
+
+        return `${strings[0]}${values[0]}${strings[1]}${values[1]}`;
+    }
+    console.log(tag`It's ${new Date().getHours()}. I'm ${""}`);
+    </script>

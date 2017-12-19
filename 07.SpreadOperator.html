@@ -1,0 +1,17 @@
+<script>
+    console.log([1,2,3]);
+    console.log(...[1,2,3]);
+
+    let first = [1,2,3];
+    let second = [4,5,6];
+
+    first.push(second);
+    console.log(first);
+
+    first = [1,2,3];
+    first.push(...second);
+    console.log(first);
+
+    let sum = (a,b,c) => { console.log(a + b + c); }
+    sum(...first);
+</script>
