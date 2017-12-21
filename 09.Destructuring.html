@@ -1,0 +1,66 @@
+<script>
+    let obj = {
+        color: "blue",
+        name: "John",
+        state: "New-York",
+        position: "50"
+    };
+
+    let {color, state} = obj;
+    console.log(color);
+    console.log(state);
+
+    var {color: background, state: location1} = obj;
+    console.log(background);
+    console.log(location1);
+
+    let o = {p: 42, q: true};
+
+    let {p, q} = o;
+    console.log(p); // 42
+    console.log(q); // true 
+
+    let {p: foo, q: bar} = o;
+    console.log(foo); // 42
+    console.log(bar); // true
+
+    let [first,,,,fifth] = [1,2,3,4,5];
+    console.log(first);
+    console.log(fifth);
+
+    var people = [
+        {
+            "firstName": "Clinton",
+            "lastName": "Ruiz",
+            "phone": "1-403-985-0449",
+            "email": "pharetra@facilisislorem.org",
+            "address": "Ap #829-3443 Nec St."
+        },
+        {
+            "firstName": "Skyler",
+            "lastName": "Carroll",
+            "phone": "1-429-754-5027",
+            "email": "Cras.vehicula.alique@diamProin.ca",
+            "address": "P.O. Box 171, 1135 Feugiat St."
+        },
+        {
+            "firstName": "Kylynn",
+            "lastName": "Madden",
+            "phone": "1-637-627-2810",
+            "email": "mollis.Duis@ante.co.uk",
+            "address": "993-6353 Aliquet, Street"
+        },
+        {
+            "firstName": "Chaney",
+            "lastName": "Edwards",
+            "phone": "1-397-181-4501",
+            "email": "rutrum@Nullamlobortis.net",
+            "address": "P.O. Box 342, 9574 Egestas Street"
+        }
+    ]
+    people.forEach(({firstName}) => console.log(firstName));
+
+    let [,second] = people;
+    let logEmail = ({email}) => console.log(email);
+    logEmail(second);
+</script>
