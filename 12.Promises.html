@@ -1,0 +1,22 @@
+<script>
+    let proceed = ((resolve, reject) => {
+        if (true) {
+            resolve("Hello world");
+        } else {
+            reject("Goodby world");
+        }
+    });
+
+    let p = new Promise((resolve, reject) => {
+        //throw new Error("Error thrown!!!");
+        setTimeout(() => proceed(resolve, reject), 2000);
+    });
+
+    p.then((data) => {
+        console.log("success:  ", data);
+        throw new Error("Error thrown!!!");
+        return "hello from the first then";
+    })
+     .then((data) => console.log("success2:  ", data))
+     .catch((error) => console.error("error: ", error));
+</script>
