@@ -1,0 +1,33 @@
+<script>
+    function* greet() {
+        console.log("You called next()");
+        yield "hello";
+    }
+
+    // let greater = greet();
+    // let next = greater.next();
+    // //console.log(next);
+    // let done = greater.next();
+    // //console.log(done);
+
+    function* greet1() {
+        console.log("Generators are lazy");
+        yield "How";
+        console.log("I'm not called until the second next");
+        yield "are";
+        console.log('Call me before "you?"');
+        yield "you?";
+        console.log('Called when "done"');
+    }
+
+    let greater1 = greet1();
+    // console.log(greater1.next());
+    // console.log(greater1.next());
+    // console.log(greater1.next());
+    // console.log(greater1.next());
+    // console.log(greater1.next())
+
+    for (let word of greater1) {
+        console.log(word);
+    }
+</script>
