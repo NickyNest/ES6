@@ -1,0 +1,27 @@
+<script>
+    let myMap = new Map();
+    myMap.set('foo', 'bar');
+    myMap.set('hello', 'world');
+
+    console.log(myMap.get('foo'));
+    console.log(myMap.get('qwerty'));
+
+    console.log(myMap.has('hello'));
+    console.log(myMap.has('qwerry'));
+
+    //myMap.clear();
+    console.log(myMap.size);
+
+    for (let key of myMap.keys()) {
+        console.log(key);
+    }
+
+    for (let value of myMap.values()) {
+        console.log(value);
+    }
+
+    for (let [key, value] of myMap.entries()) {
+        console.log(`${key} = ${value}`);
+    }
+    
+</script>
