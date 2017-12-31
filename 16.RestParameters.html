@@ -1,0 +1,20 @@
+<script>
+    function Store() {
+        var basket = {
+            fruit: [],
+            vegatable: []
+        }
+        return {
+            add: function(category, ...items) {
+                console.log(items);
+                items.forEach( (value, index, array) => basket[category].push(value) );
+            },
+            basket: basket
+        }
+    }
+
+    let myStore = new Store();
+    myStore.add('fruit', 'apples', 'oranges');
+    myStore.add('vegatable', 'potatotoes', 'onion', 'tomato')
+    console.log(myStore.basket);
+</script>
